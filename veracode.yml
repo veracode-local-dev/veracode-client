@@ -41,6 +41,7 @@ veracode_sca_scan:
     branches_to_run:
       - 'master'
       - 'main'
+      - 'veracode_fix'
     branches_to_exclude:
   pull_request:
     trigger: false
