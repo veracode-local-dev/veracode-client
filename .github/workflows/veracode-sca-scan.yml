@@ -43,5 +43,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           create-issues: false
           recursive: true
+          debug: true
 #           fail-on-cvss: 1
 #           min-cvss-for-issue: 1
