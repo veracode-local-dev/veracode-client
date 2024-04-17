@@ -35,8 +35,8 @@ jobs:
         NUGET_AUTH_TOKEN: ${{ secrets.MYGET_TOKEN }}
     - name: Build
       run: |
-        dotnet restore --debug
-        dotnet publish -p:UseAppHost=False -p:MapFileExtensions=False -c Debug -o ./output --debug
+        dotnet restore --configfile NuGet.Config
+        dotnet publish -p:UseAppHost=False -p:MapFileExtensions=False -c Debug -o ./output --no-restore
     - name: Create zip archive
       run: zip -r veracode.zip ./output
 
